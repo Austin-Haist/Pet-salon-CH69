@@ -1,48 +1,32 @@
 body {
+    background-color: #f4f1ed;
     font-family: Arial, sans-serif;
-    background-color: #f7efe5;
-    margin: 0;
-    color: #333;
-}
-
-nav {
-    background-color: #5c4033;
-    padding: 20px;
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
-
-nav h2 {
-    color: white;
-    margin: 0;
-}
-
-nav a {
-    color: #f7efe5;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 main {
-    max-width: 700px;
-    margin: 50px auto;
+    max-width: 850px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#pets {
     background-color: white;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px gray;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-h1 {
-    font-size: 48px;
-    color: #5c4033;
+#pets li {
+    font-size: 20px;
+    padding: 5px;
 }
 
-section h2 {
-    font-size: 32px;
+form {
+    box-shadow: 0px 0px 8px #ccc;
 }
 
-li {
-    font-size: 22px;
-    padding: 8px;
+.navbar-brand {
+    font-weight: bold;
 }

@@ -22,13 +22,25 @@ let pet3 = {
     breed: "Bulldog"
 };
 
-let petsList = [pet1, pet2, pet3];
+function Pet(name, age, breed, gender, service) {
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.gender = gender;
+    this.service = service;
+}
+
+let pet4 = new Pet("Luna", 2, "Husky", "Female", "Bath");
+let pet5 = new Pet("Max", 4, "Poodle", "Male", "Grooming");
+let pet6 = new Pet("Bella", 6, "Beagle", "Female", "Nail Trim");
+
+let petsList = [pet1, pet2, pet3, pet4, pet5, pet6];
 
 function displayPets() {
-    let output = "<ol>";
+    let output = "<ol class='list-group list-group-numbered'>";
 
     for (let i = 0; i < petsList.length; i++) {
-        output += "<li>" + petsList[i].name + "</li>";
+        output += "<li class='list-group-item'>" + petsList[i].name + "</li>";
     }
 
     output += "</ol>";
