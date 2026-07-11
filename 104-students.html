@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Student Registration</title>
+</head>
+
+<body class="bg-light">
+
+    <main class="container mt-5">
+
+        <h1 class="mb-4">Student Registration</h1>
+
+        <form class="border rounded p-4 bg-light">
+
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input class="form-control" type="text" placeholder="John Wick" id="studentName">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Age</label>
+                <input class="form-control" type="number" placeholder="10" id="studentAge">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Course</label>
+                <select class="form-select" name="" id="studentCourse">
+                    <option value="">Select a course</option>
+                    <option value="Math 1">Math 1</option>
+                    <option value="Math 2">Math 2</option>
+                    <option value="Math 3">Math 3</option>
+                </select>
+            </div>
+
+            <div class="text-end">
+                <button
+                    class="btn btn-primary"
+                    type="button"
+                    onclick="registerStudent()">
+                    Save
+                </button>
+                <button 
+                    class="btn btn-secondary" type="reset">
+                    Reset
+                </button>
+            </div>
+
+        </form>
+
+    <!-- Table  -->
+     <section class="m-5">
+        <h2>Students List</h2>
+
+        <table class="table">
+
+            <!-- Headers-->
+             <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>Delete</th>
+             </tr>
+
+             <!-- Body -->
+             <tbody id="body">
+
+                <tr>
+                    <td>John</td>
+                    <td>10</td>
+                    <td>Math 1</td>
+                    <td> <button class="btn btn-danger" >Delete</button> </td>
+                </tr>
+
+
+             </tbody>
+        </table>
+        
+
+    </section>
+
+    <script src="./scripts/104-students.js"></script>
+
+</body>
+</html>

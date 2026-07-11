@@ -22,30 +22,167 @@ let pet3 = {
     breed: "Bulldog"
 };
 
+
+// Pet object constructor
+
 function Pet(name, age, breed, gender, service) {
+
     this.name = name;
     this.age = age;
     this.breed = breed;
     this.gender = gender;
     this.service = service;
+
 }
 
-let pet4 = new Pet("Luna", 2, "Husky", "Female", "Bath");
-let pet5 = new Pet("Max", 4, "Poodle", "Male", "Grooming");
-let pet6 = new Pet("Bella", 6, "Beagle", "Female", "Nail Trim");
 
-let petsList = [pet1, pet2, pet3, pet4, pet5, pet6];
+// Create three pets using the constructor
+
+let pet4 = new Pet(
+    "Luna",
+    2,
+    "Husky",
+    "Female",
+    "Bath"
+);
+
+let pet5 = new Pet(
+    "Max",
+    4,
+    "Poodle",
+    "Male",
+    "Grooming"
+);
+
+let pet6 = new Pet(
+    "Bella",
+    6,
+    "Beagle",
+    "Female",
+    "Nail Trim"
+);
+
+
+// Store all pets in an array
+
+let petsList = [
+    pet1,
+    pet2,
+    pet3,
+    pet4,
+    pet5,
+    pet6
+];
+
+
+// Display one pet as a table row
+
+function displayRow(pet, index) {
+
+    let row = "";
+
+    row += "<tr>";
+
+    row += "<td>" + pet.name + "</td>";
+    row += "<td>" + pet.age + "</td>";
+    row += "<td>" + pet.gender + "</td>";
+    row += "<td>" + pet.service + "</td>";
+    row += "<td>" + pet.breed + "</td>";
+
+    row +=
+        "<td>" +
+        "<button class='btn btn-danger btn-sm' " +
+        "onclick='deletePet(" + index + ")'>" +
+        "Delete" +
+        "</button>" +
+        "</td>";
+
+    row += "</tr>";
+
+    return row;
+}
+
+
+// Display all pets in the table
 
 function displayPets() {
-    let output = "<ol class='list-group list-group-numbered'>";
+
+    let output = "";
 
     for (let i = 0; i < petsList.length; i++) {
-        output += "<li class='list-group-item'>" + petsList[i].name + "</li>";
+
+        output += displayRow(petsList[i], i);
+
     }
 
-    output += "</ol>";
+    document.getElementById
+    ("petTableBody").innerHTML = output;
 
-    document.getElementById("pets").innerHTML = output;
 }
+
+
+// Register a new pet from the form
+
+function registerPet() {
+
+    let name = document.getElementById
+    ("petName").value;
+
+    let age = document.getElementById
+    ("petAge").value;
+
+    let breed = document.getElementById
+    ("petBreed").value;
+
+    let gender = document.getElementById
+    ("petGender").value;
+
+    let service = document.getElementById
+    ("petService").value;
+
+
+    let newPet = new Pet(
+        name,
+        age,
+        breed,
+        gender,
+        service
+    );
+
+
+    petsList.push(newPet);
+
+    displayPets();
+
+    document.getElementById
+    ("petName").value = "";
+
+    document.getElementById
+    ("petAge").value = "";
+
+    document.getElementById
+    ("petBreed").value = "";
+
+    document.getElementById
+    ("petGender").value = "";
+
+    document.getElementById
+    ("petService").value = "";
+
+}
+
+
+// Delete a pet from the array
+
+function deletePet(index) {
+
+    petsList.splice(index, 1);
+
+    displayPets();
+
+}
+
+
+// Display the pets when the page loads
 
 displayPets();
