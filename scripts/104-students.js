@@ -42,8 +42,20 @@ function registerStudent(){
         <td>${newStudent.name}</td>
         <td>${newStudent.age}</td>
         <td>${newStudent.course}</td>
-        <td> <button class="btn btn-danger" >Delete</button> </td>
+        <td> <button class="btn btn-danger delete-btn">Delete</button> </td>
     `;
 
+    body.appendChild(row);
+
+    // Delete functionality
+    row.querySelector(".delete-btn").addEventListener("click", function() {
+
+        const confirmation = confirm("are you sure you want to delete this student?");
+
+        if (confirmation) {
+            row.remove();
+        }
+    });
+    
     body.appendChild(row);
 }

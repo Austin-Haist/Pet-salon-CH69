@@ -1,3 +1,5 @@
+// Create three pet object literals
+
 let pet1 = {
     name: "Walter",
     age: 5,
@@ -36,46 +38,16 @@ function Pet(name, age, breed, gender, service) {
 }
 
 
-// Create three pets using the constructor
-
-let pet4 = new Pet(
-    "Luna",
-    2,
-    "Husky",
-    "Female",
-    "Bath"
-);
-
-let pet5 = new Pet(
-    "Max",
-    4,
-    "Poodle",
-    "Male",
-    "Grooming"
-);
-
-let pet6 = new Pet(
-    "Bella",
-    6,
-    "Beagle",
-    "Female",
-    "Nail Trim"
-);
-
-
-// Store all pets in an array
+// Store the three original pets in the array
 
 let petsList = [
     pet1,
     pet2,
-    pet3,
-    pet4,
-    pet5,
-    pet6
+    pet3
 ];
 
 
-// Display one pet as a table row
+// Create and return one table row
 
 function displayRow(pet, index) {
 
@@ -100,6 +72,7 @@ function displayRow(pet, index) {
     row += "</tr>";
 
     return row;
+
 }
 
 
@@ -121,7 +94,7 @@ function displayPets() {
 }
 
 
-// Register a new pet from the form
+// Register a new pet
 
 function registerPet() {
 
@@ -154,6 +127,9 @@ function registerPet() {
 
     displayPets();
 
+
+    // Clear the form fields
+
     document.getElementById
     ("petName").value = "";
 
@@ -172,17 +148,25 @@ function registerPet() {
 }
 
 
-// Delete a pet from the array
+// Delete a pet with confirmation
 
 function deletePet(index) {
 
-    petsList.splice(index, 1);
+    const confirmation = confirm(
+        "Are you sure you want to delete this pet?"
+    );
 
-    displayPets();
+    if (confirmation) {
+
+        petsList.splice(index, 1);
+
+        displayPets();
+
+    }
 
 }
 
 
-// Display the pets when the page loads
+// Display the original pets when the page loads
 
 displayPets();

@@ -1,0 +1,34 @@
+/* All the Elements */
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* By HTML Element */
+h1 {
+    color: red;
+}
+
+/* By Class Name */
+.text {
+    font-size: 20px;
+}
+
+/* By Id */
+#saveButton{
+    background-color: green;
+}
+
+
+/* jQuery Selectors
+
+Hide the H1
+$("h1").hide();
+
+Hide the paragraph
+$("p").hide();
+$(".text").hide();
+
+Hide the button by id
+$("#saveButton").hide();
+
+*/
