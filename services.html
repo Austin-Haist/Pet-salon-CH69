@@ -2,35 +2,166 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet">
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
     <title>Services</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Pet Salon</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="registration.html">Registration</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="services.html">Services</a>
-        </li>
 
-      </ul>
-    </div>
-  </div>
-</nav>
-    <h1>Services</h1>
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">
+                Pet Salon
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">
+                            Registration
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="services.html">
+                            Services
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="container mt-5">
+
+        <h1 class="mb-4">Services</h1>
+
+        <section class="row justify-content-center">
+
+            <div class="col-md-8 col-lg-7">
+
+                <form class="border rounded p-4 bg-white shadow-sm">
+
+                    <div class="mb-3">
+
+                        <label
+                            class="form-label"
+                            for="serviceName">
+                            Service
+                        </label>
+
+                        <input
+                            class="form-control"
+                            type="text"
+                            id="serviceName"
+                            placeholder="Bath Basic">
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label
+                            class="form-label"
+                            for="serviceDescription">
+                            Description
+                        </label>
+
+                        <input
+                            class="form-control"
+                            type="text"
+                            id="serviceDescription"
+                            placeholder="Includes shampoo and towel dry">
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label
+                            class="form-label"
+                            for="servicePrice">
+                            Price
+                        </label>
+
+                        <input
+                            class="form-control"
+                            type="number"
+                            id="servicePrice"
+                            placeholder="10.00"
+                            step="0.01">
+
+                    </div>
+
+
+                    <div class="d-flex gap-2">
+
+                        <button
+                            class="btn btn-primary"
+                            type="button">
+                            Register
+                        </button>
+
+                        <button
+                            class="btn btn-secondary"
+                            type="reset">
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Bootstrap JavaScript for the mobile navbar -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 </body>
 </html>
