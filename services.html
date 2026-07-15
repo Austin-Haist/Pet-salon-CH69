@@ -69,96 +69,38 @@
         </div>
     </nav>
 
+    <h1>Services </h1>
 
-    <!-- Main Content -->
-    <main class="container mt-5">
+    <form class="bg-light p-4 border rounded m-5" id="servicesForm">
+      <div class="mb-3">
+        <label class="form-label">Service</label>
+        <input class="form-control" type="text" placeholder="Bath Basic" id="serviceName">
+    </div>
+      
+    <div class="mb-4">
+        <label class="form-label">Description</label>
+        <input class="form-control" type="text" placeholder="Includes shampoo and towel dry" id="serviceDescription">
+      </div>
 
-        <h1 class="mb-4">Services</h1>
+      <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input class="form-control" type="number" step="any" placeholder="10.99"  id="servicePrice">
+      </div>
 
-        <section class="row justify-content-center">
+      <div class="d-flex justify-content-end gap-3">
+        <button class="btn btn-primary" type="submit">Register</button>
+        <button class="btn btn-secondary" type="reset">Reset</button>
+      </div>
 
-            <div class="col-md-8 col-lg-7">
-
-                <form class="border rounded p-4 bg-white shadow-sm">
-
-                    <div class="mb-3">
-
-                        <label
-                            class="form-label"
-                            for="serviceName">
-                            Service
-                        </label>
-
-                        <input
-                            class="form-control"
-                            type="text"
-                            id="serviceName"
-                            placeholder="Bath Basic">
-
-                    </div>
+      </form>
 
 
-                    <div class="mb-3">
-
-                        <label
-                            class="form-label"
-                            for="serviceDescription">
-                            Description
-                        </label>
-
-                        <input
-                            class="form-control"
-                            type="text"
-                            id="serviceDescription"
-                            placeholder="Includes shampoo and towel dry">
-
-                    </div>
-
-
-                    <div class="mb-3">
-
-                        <label
-                            class="form-label"
-                            for="servicePrice">
-                            Price
-                        </label>
-
-                        <input
-                            class="form-control"
-                            type="number"
-                            id="servicePrice"
-                            placeholder="10.00"
-                            step="0.01">
-
-                    </div>
-
-
-                    <div class="d-flex gap-2">
-
-                        <button
-                            class="btn btn-primary"
-                            type="button">
-                            Register
-                        </button>
-
-                        <button
-                            class="btn btn-secondary"
-                            type="reset">
-                            Cancel
-                        </button>
-
-                    </div>
-
-                </form>
-
-            </div>
-
-        </section>
 
     </main>
 
 
-
-
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    
+    <script src="./scripts/service.js"></script>
 </body>
 </html>

@@ -32,3 +32,15 @@ Hide the button by id
 $("#saveButton").hide();
 
 */
+
+.btn-primary{
+    background-color: red !important;
+}
+
+.my-class{
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+    letter-spacing: 4px;
+    padding: 10px;
+    background-color: red;
+}
