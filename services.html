@@ -5,14 +5,14 @@
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-    
-
 
     <!-- Bootstrap CSS -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/dark-mode.css">
+    <link rel="stylesheet" href="./styles/services.css">
 
     <title>Services</title>
 </head>
@@ -24,7 +24,7 @@
         <div class="container-fluid">
 
             <a class="navbar-brand" href="index.html">
-                Pet Salon
+                Papa's Paws and Tails
             </a>
 
             <button
@@ -72,42 +72,174 @@
         </div>
     </nav>
 
-    <h1>Services </h1>
 
-    <div class="m-5 d-flex justify-content-end">
-        <button id="changeModeButton" class="btn btn-dark">🌙 Change Mode</button>
-    </div>
+    <main class="container mt-4">
 
-    <form class="p-4 border rounded m-5" id="servicesForm">
-      <div class="mb-3">
-        <label class="form-label">Service</label>
-        <input class="form-control" type="text" placeholder="Bath Basic" id="serviceName">
-    </div>
-      
-    <div class="mb-4">
-        <label class="form-label">Description</label>
-        <input class="form-control" type="text" placeholder="Includes shampoo and towel dry" id="serviceDescription">
-      </div>
+        <!-- Services title and Change Mode button -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
 
-      <div class="mb-3">
-        <label class="form-label">Price</label>
-        <input class="form-control" type="number" step="any" placeholder="10.99"  id="servicePrice">
-      </div>
+            <h1 class="mb-0">Services</h1>
 
-      <div class="d-flex justify-content-end gap-3">
-        <button class="btn btn-primary" type="submit">Register</button>
-        <button class="btn btn-secondary" type="reset">Reset</button>
-      </div>
+            <button
+                id="changeModeButton"
+                class="btn btn-dark"
+                type="button">
+                🌙 Change Mode
+            </button>
 
-      </form>
+        </div>
 
 
+        <!-- Service Images -->
+        <section class="row text-center g-4 mb-5">
+
+            <div class="col-md-4">
+
+                <div class="service-card">
+
+                    <img
+                        src="./images/bath.jpeg"
+                        class="img-fluid rounded shadow service-image"
+                        alt="Dog bath service">
+
+                    <h2 class="h5 mt-3">
+                        Bath
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="service-card">
+
+                    <img
+                        src="./images/nails.jpg"
+                        class="img-fluid rounded shadow service-image"
+                        alt="Dog nail trim service">
+
+                    <h2 class="h5 mt-3">
+                        Nail Trim
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="service-card">
+
+                    <img
+                        src="./images/paws.png"
+                        class="img-fluid rounded shadow service-image"
+                        alt="Dog paw cleaning service">
+
+                    <h2 class="h5 mt-3">
+                        Paw Cleaning
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Services Form -->
+        <form class="p-4 border rounded mb-5" id="servicesForm">
+
+            <div class="mb-3">
+
+                <label class="form-label" for="serviceName">
+                    Service
+                </label>
+
+                <select class="form-select" id="serviceName">
+
+                    <option value="">
+                        Select a service
+                    </option>
+
+                    <option value="Bath">
+                        Bath
+                    </option>
+
+                    <option value="Nail Trim">
+                        Nail Trim
+                    </option>
+
+                    <option value="Paw Cleaning">
+                        Paw Cleaning
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="mb-4">
+
+                <label class="form-label" for="serviceDescription">
+                    Description
+                </label>
+
+                <input
+                    class="form-control"
+                    type="text"
+                    id="serviceDescription"
+                    readonly>
+
+            </div>
+
+
+            <div class="mb-3">
+
+                <label class="form-label" for="servicePrice">
+                    Price
+                </label>
+
+                <input
+                    class="form-control"
+                    type="text"
+                    id="servicePrice"
+                    readonly>
+
+            </div>
+
+
+            <div class="d-flex justify-content-end gap-3">
+
+                <button
+                    class="btn btn-primary"
+                    type="submit">
+                    Register
+                </button>
+
+                <button
+                    class="btn btn-secondary"
+                    type="reset"
+                    id="resetButton">
+                    Reset
+                </button>
+
+            </div>
+
+        </form>
 
     </main>
 
 
-    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
-    
+    <script
+        src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+        crossorigin="anonymous">
+    </script>
+
     <script src="./scripts/service.js"></script>
+
 </body>
 </html>
