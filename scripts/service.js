@@ -23,3 +23,24 @@ $("#servicesForm").submit(function(event){
 
 
 });
+
+$("#changeModeButton").click(function (){
+    $("body").toggleClass("dark-mode");
+
+
+    // Ask if the body has the dark-mode class
+    const isDark = $("body").hasClass("dark-mode");
+
+    // Change the button text
+        // if is dark -> show the sun
+        // if not -> show the moon
+        
+    if(isDark){
+        $("#changeModeButton").text("☀️ Change Mode");
+    } else {
+        $("#changeModeButton").text("🌙 Change Mode");
+    }
+
+    
+
+    });
