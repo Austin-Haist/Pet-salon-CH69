@@ -1,23 +1,28 @@
-/* Default Color - Light Mode */
-:root{
-    --background-color:#f4f4fb;
-    --surface-color: #fbfbff;
+/* Default Colors - Light Mode */
+
+:root {
+    --background-color: #f4f4f4;
+    --surface-color: #ffffff;
     --accent-color: #008fff;
     --text-color: #1a2744;
 }
 
-/* Dark Mode Colors - When applying the class */
-.dark-mode{
-    --background-color:#1a2744;
-    --surface-color: #23345a;
-    --text-color: #f4f4fb;
+
+/* Dark Mode Colors */
+
+.dark-mode {
+    --background-color: #1a2744;
+    --surface-color: #243345;
+    --text-color: #f4f4f4;
     --accent-color: #45adff;
 }
 
-/* Apply the Variables: Style the page */
+
+/* Apply the variables */
+
 body {
     background-color: var(--background-color);
-    transition: background-color ease 0.6s;
+    transition: background-color 0.6s;
 }
 
 form {
@@ -29,5 +34,5 @@ h1 {
 }
 
 * {
-    color:var(--text-color);
+    color: var(--text-color);
 }

@@ -1,30 +1,3 @@
-// Create three pet object literals
-
-let pet1 = {
-    name: "Walter",
-    age: 5,
-    gender: "Male",
-    service: "Grooming",
-    breed: "Golden Retriever"
-};
-
-let pet2 = {
-    name: "Tato",
-    age: 3,
-    gender: "Male",
-    service: "Nail Trim",
-    breed: "Chihuahua"
-};
-
-let pet3 = {
-    name: "Rocky",
-    age: 7,
-    gender: "Male",
-    service: "Bath",
-    breed: "Bulldog"
-};
-
-
 // Pet object constructor
 
 function Pet(name, age, breed, gender, service) {
@@ -38,13 +11,9 @@ function Pet(name, age, breed, gender, service) {
 }
 
 
-// Store the three original pets in the array
+// Store registered pets in the array
 
-let petsList = [
-    pet1,
-    pet2,
-    pet3
-];
+let petsList = [];
 
 
 // Create and return one table row
@@ -64,6 +33,7 @@ function displayRow(pet, index) {
     row +=
         "<td>" +
         "<button class='btn btn-danger btn-sm' " +
+        "type='button' " +
         "onclick='deletePet(" + index + ")'>" +
         "Delete" +
         "</button>" +
@@ -76,7 +46,7 @@ function displayRow(pet, index) {
 }
 
 
-// Display all pets in the table
+// Display all registered pets in the table
 
 function displayPets() {
 
@@ -88,8 +58,9 @@ function displayPets() {
 
     }
 
-    document.getElementById
-    ("petTableBody").innerHTML = output;
+    document.getElementById(
+        "petTableBody"
+    ).innerHTML = output;
 
 }
 
@@ -98,21 +69,45 @@ function displayPets() {
 
 function registerPet() {
 
-    let name = document.getElementById
-    ("petName").value;
+    let name = document.getElementById(
+        "petName"
+    ).value.trim();
 
-    let age = document.getElementById
-    ("petAge").value;
+    let age = document.getElementById(
+        "petAge"
+    ).value.trim();
 
-    let breed = document.getElementById
-    ("petBreed").value;
+    let breed = document.getElementById(
+        "petBreed"
+    ).value.trim();
 
-    let gender = document.getElementById
-    ("petGender").value;
+    let gender = document.getElementById(
+        "petGender"
+    ).value;
 
-    let service = document.getElementById
-    ("petService").value;
+    let service = document.getElementById(
+        "petService"
+    ).value;
 
+
+    // Make sure all fields have information
+
+    if (
+        name == "" ||
+        age == "" ||
+        breed == "" ||
+        gender == "" ||
+        service == ""
+    ) {
+
+        alert("Please complete all fields.");
+
+        return;
+
+    }
+
+
+    // Create the new pet object
 
     let newPet = new Pet(
         name,
@@ -123,27 +118,37 @@ function registerPet() {
     );
 
 
+    // Add the pet to the array
+
     petsList.push(newPet);
+
+
+    // Display the pet in the table
 
     displayPets();
 
 
     // Clear the form fields
 
-    document.getElementById
-    ("petName").value = "";
+    document.getElementById(
+        "petName"
+    ).value = "";
 
-    document.getElementById
-    ("petAge").value = "";
+    document.getElementById(
+        "petAge"
+    ).value = "";
 
-    document.getElementById
-    ("petBreed").value = "";
+    document.getElementById(
+        "petBreed"
+    ).value = "";
 
-    document.getElementById
-    ("petGender").value = "";
+    document.getElementById(
+        "petGender"
+    ).value = "";
 
-    document.getElementById
-    ("petService").value = "";
+    document.getElementById(
+        "petService"
+    ).value = "";
 
 }
 
@@ -152,9 +157,14 @@ function registerPet() {
 
 function deletePet(index) {
 
+    let petName = petsList[index].name;
+
     const confirmation = confirm(
-        "Are you sure you want to delete this pet?"
+        "Are you sure you want to delete " +
+        petName +
+        "?"
     );
+
 
     if (confirmation) {
 
@@ -167,6 +177,34 @@ function deletePet(index) {
 }
 
 
-// Display the original pets when the page loads
+// Change between light mode and dark mode
+
+$("#changeModeButton").click(function () {
+
+    $("body").toggleClass("dark-mode");
+
+    const isDark =
+        $("body").hasClass("dark-mode");
+
+
+    if (isDark) {
+
+        $("#changeModeButton").text(
+            "☀️ Change Mode"
+        );
+
+    }
+    else {
+
+        $("#changeModeButton").text(
+            "🌙 Change Mode"
+        );
+
+    }
+
+});
+
+
+// Display the registered-pets table when the page loads
 
 displayPets();

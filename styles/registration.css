@@ -1,32 +1,93 @@
 body {
-    background-color: #f4f1ed;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: Arial, sans-serif;
+    transition: background-color 0.6s, color 0.6s;
 }
 
 main {
     max-width: 850px;
 }
 
+h1 {
+    color: var(--accent-color);
+}
+
 h2 {
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 20px;
-}
-
-#pets {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-#pets li {
-    font-size: 20px;
-    padding: 5px;
-}
-
-form {
-    box-shadow: 0px 0px 8px #ccc;
 }
 
 .navbar-brand {
     font-weight: bold;
+}
+
+
+/* Registration dog image */
+
+.registration-image {
+    display: block;
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 30px auto;
+}
+
+
+/* Registration form */
+
+#registrationForm {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border-color: #777 !important;
+    box-shadow: none;
+    transition: background-color 0.6s, color 0.6s;
+}
+
+
+/* Registered Pets section */
+
+.registered-pets-section {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border-color: #777 !important;
+    transition: background-color 0.6s, color 0.6s;
+}
+
+
+/* Form labels */
+
+#registrationForm label {
+    color: var(--text-color);
+}
+
+
+/* Registered pets table */
+
+.table {
+    margin-bottom: 0;
+}
+
+.table td {
+    color: var(--text-color);
+    background-color: var(--surface-color);
+}
+
+
+/* Dark-mode input styling */
+
+.dark-mode #registrationForm .form-control,
+.dark-mode #registrationForm .form-select {
+    background-color: #f4f4f4;
+    color: #1a2744;
+    border-color: #cccccc;
+}
+
+.dark-mode #registrationForm .form-control::placeholder {
+    color: #666666;
+}
+
+.dark-mode #registrationForm .form-select option {
+    background-color: white;
+    color: #1a2744;
 }

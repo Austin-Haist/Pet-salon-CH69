@@ -6,48 +6,127 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap CSS -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet">
+
+    <!-- Dark Mode CSS -->
+    <link rel="stylesheet" href="./styles/dark-mode.css">
+
+    <!-- Registration CSS -->
+    <link rel="stylesheet" href="./styles/registration.css">
 
     <title>Pet Salon Registration</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Pet Salon</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="registration.html">Registration</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="services.html">Services</a>
-        </li>
 
-      </ul>
-    </div>
-  </div>
-</nav>
-</body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
 
-    <main class="container mt-5">
+        <div class="container-fluid">
 
-        <section class="bg-white p-4 rounded shadow-sm mb-5">
+            <a class="navbar-brand" href="index.html">
+                Papa's Paws and Tails
+            </a>
 
-            <h2 class="mb-4">Registration</h2>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
 
-            <form class="border rounded p-4 bg-light">
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="index.html">
+                            Home
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="registration.html">
+                            Registration
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="services.html">
+                            Services
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <main class="container mt-4">
+
+        <!-- Registration title and Change Mode button -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <h1 class="mb-0">
+                Registration
+            </h1>
+
+            <button
+                id="changeModeButton"
+                class="btn btn-dark"
+                type="button">
+                🌙 Change Mode
+            </button>
+
+        </div>
+
+
+        <!-- Registration Image -->
+        <div class="text-center mb-4">
+
+            <img
+                src="./images/clipboard.png"
+                alt="Registration Dog"
+                class="img-fluid registration-image">
+
+        </div>
+
+
+        <!-- Registration Form Section -->
+        <section class="mb-5">
+
+            <form
+                class="p-4 border rounded"
+                id="registrationForm">
 
                 <div class="mb-3">
+
                     <label class="form-label" for="petName">
                         Name
                     </label>
@@ -57,9 +136,12 @@
                         type="text"
                         id="petName"
                         placeholder="Walter">
+
                 </div>
 
+
                 <div class="mb-3">
+
                     <label class="form-label" for="petAge">
                         Age
                     </label>
@@ -69,9 +151,12 @@
                         type="number"
                         id="petAge"
                         placeholder="7">
+
                 </div>
 
+
                 <div class="mb-3">
+
                     <label class="form-label" for="petBreed">
                         Breed
                     </label>
@@ -81,33 +166,67 @@
                         type="text"
                         id="petBreed"
                         placeholder="Mixed">
+
                 </div>
 
+
                 <div class="mb-3">
+
                     <label class="form-label" for="petGender">
                         Gender
                     </label>
 
                     <select class="form-select" id="petGender">
-                        <option value="">Select gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
+
+                        <option value="">
+                            Select gender
+                        </option>
+
+                        <option value="Male">
+                            Male
+                        </option>
+
+                        <option value="Female">
+                            Female
+                        </option>
+
                     </select>
+
                 </div>
 
+
                 <div class="mb-3">
+
                     <label class="form-label" for="petService">
                         Service
                     </label>
 
                     <select class="form-select" id="petService">
-                        <option value="">Select service</option>
-                        <option value="Grooming">Grooming</option>
-                        <option value="Bath">Bath</option>
-                        <option value="Nail Trim">Nail Trim</option>
-                        <option value="Ear Cleaning">Ear Cleaning</option>
+
+                        <option value="">
+                            Select service
+                        </option>
+
+                        <option value="Bath">
+                            Bath
+                        </option>
+
+                        <option value="Nail Trim">
+                            Nail Trim
+                        </option>
+
+                        <option value="Paw Cleaning">
+                            Paw Cleaning
+                        </option>
+
+                        <option value="Full Service">
+                            Full Service
+                        </option>
+
                     </select>
+
                 </div>
+
 
                 <div class="text-end">
 
@@ -130,15 +249,21 @@
 
         </section>
 
-        <section class="bg-white p-4 rounded shadow-sm">
 
-            <h2 class="mb-4">Registered Pets</h2>
+        <!-- Registered Pets Section -->
+        <section
+            class="registered-pets-section p-4 border rounded mb-5">
+
+            <h2 class="mb-4">
+                Registered Pets
+            </h2>
 
             <div class="table-responsive">
 
                 <table class="table table-striped table-bordered">
 
                     <thead class="table-dark">
+
                         <tr>
                             <th>Name</th>
                             <th>Age</th>
@@ -147,6 +272,7 @@
                             <th>Breed</th>
                             <th>Delete</th>
                         </tr>
+
                     </thead>
 
                     <tbody id="petTableBody">
@@ -161,7 +287,21 @@
 
     </main>
 
-    <script src="scripts/registration.js"></script>
+
+    <!-- jQuery -->
+    <script
+        src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Registration JavaScript -->
+    <script src="./scripts/registration.js"></script>
 
 </body>
 </html>

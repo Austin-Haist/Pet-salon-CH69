@@ -1,0 +1,114 @@
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.6s, color 0.6s;
+}
+
+main {
+    max-width: 1000px;
+}
+
+/* Navigation Bar */
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Headings */
+
+h1 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+
+/* Hero Section */
+
+.hero-section {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid #777;
+    transition: background-color 0.6s, color 0.6s;
+}
+
+/* Larger image with no cropping */
+
+.hero-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+}
+
+
+/* Home Cards */
+
+.home-card {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid #777;
+    transition: background-color 0.6s, color 0.6s;
+}
+
+
+/* Larger About image */
+
+.about-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+}
+
+
+/* Hours Table */
+
+.hours-table {
+    color: var(--text-color);
+}
+
+.hours-table td {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border-color: #777;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border-top: 1px solid #777;
+}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about-image {
+        max-width: 250px;
+    }
+
+}

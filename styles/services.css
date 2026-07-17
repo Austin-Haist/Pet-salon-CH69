@@ -1,29 +1,104 @@
-.services-title {
-    margin: 0;
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.6s, color 0.6s;
 }
+
+main {
+    max-width: 850px;
+}
+
+/* Page Title */
+
+h1 {
+    color: var(--accent-color);
+}
+
+
+/* Service Cards */
 
 .service-card {
     height: 100%;
+    color: var(--text-color);
 }
 
 .service-image {
+    display: block;
     width: 100%;
     height: 250px;
     object-fit: cover;
+    border-radius: 8px;
 }
+
+
+/* Services Form */
 
 #servicesForm {
-    background-color: white;
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border-color: #777 !important;
+    transition: background-color 0.6s, color 0.6s;
 }
 
-.dark-mode #servicesForm {
-    background-color: #2b2b2b;
-    color: white;
+
+/* Form Labels */
+
+#servicesForm label {
+    color: var(--text-color);
 }
+
+
+/* Inputs */
+
+.form-control,
+.form-select {
+    transition: background-color 0.6s, color 0.6s;
+}
+
+
+/* Dark Mode */
 
 .dark-mode .service-card {
     color: white;
 }
+
+
+/* Make inputs light like the Registration page */
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background-color: #f4f4f4;
+    color: #1a2744;
+    border-color: #cccccc;
+}
+
+
+/* Placeholder text */
+
+.dark-mode .form-control::placeholder {
+    color: #666666;
+}
+
+
+/* Dropdown menu options */
+
+.dark-mode .form-select option {
+    background-color: white;
+    color: #1a2744;
+}
+
+
+/* Some browsers (Chrome/Edge) need this */
+
+.dark-mode select,
+.dark-mode option {
+    background-color: white !important;
+    color: #1a2744 !important;
+}
+
+
+/* Mobile */
 
 @media (max-width: 576px) {
 
